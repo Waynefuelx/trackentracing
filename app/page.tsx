@@ -81,26 +81,26 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-100 px-6 py-16 text-zinc-900">
-      <main className="w-full max-w-xl rounded-3xl border border-zinc-200 bg-white px-10 py-12 shadow-2xl shadow-zinc-200/70">
+    <div className="flex min-h-screen items-center justify-center bg-black px-6 py-16 text-white">
+      <main className="w-full max-w-xl rounded-3xl border border-slate-700 bg-slate-900 px-10 py-12 shadow-2xl shadow-black/50">
         <header className="space-y-3">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-emerald-600">
+          <p className="text-sm font-medium uppercase tracking-[0.3em] text-emerald-400">
             Tracker & Tracing
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight">
+          <h1 className="text-3xl font-semibold tracking-tight text-white">
             Welcome back
           </h1>
-          <p className="text-sm leading-relaxed text-zinc-600">
+          <p className="text-sm leading-relaxed text-slate-400">
             Sign in to coordinate tracing calls, review case updates, and keep
             the community informed in real time.
           </p>
         </header>
 
-        <section className="mt-8 space-y-3 rounded-2xl border border-emerald-100 bg-emerald-50/80 px-5 py-4">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-700">
+        <section className="mt-8 space-y-3 rounded-2xl border border-emerald-800/50 bg-emerald-950/30 px-5 py-4">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">
             Try the demo
           </h2>
-          <p className="text-xs text-emerald-800">
+          <p className="text-xs text-emerald-300/80">
             Pick a profile to auto-fill credentials and explore each workflow.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -113,15 +113,15 @@ export default function Home() {
                   onClick={() => handleDemoSelect(account)}
                   className={`rounded-xl border px-4 py-3 text-left text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 ${
                     isActive
-                      ? "border-emerald-500 bg-white text-emerald-700 shadow-sm"
-                      : "border-emerald-200/60 bg-white/80 text-emerald-900 hover:border-emerald-400 hover:bg-white"
+                      ? "border-emerald-500 bg-emerald-950/50 text-emerald-300 shadow-sm"
+                      : "border-emerald-800/40 bg-slate-800/50 text-emerald-200 hover:border-emerald-600 hover:bg-slate-800"
                   }`}
                 >
                   <span className="block font-semibold">{account.label}</span>
-                  <span className="mt-1 block text-xs text-emerald-800/80">
+                  <span className="mt-1 block text-xs text-emerald-300/70">
                     {account.description}
                   </span>
-                  <span className="mt-3 block text-[11px] font-mono text-emerald-700/90">
+                  <span className="mt-3 block text-[11px] font-mono text-emerald-400/80">
                     {account.email}
                   </span>
                 </button>
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-slate-300"
             >
               Work email
             </label>
@@ -152,14 +152,14 @@ export default function Home() {
               value={form.email}
               onChange={handleChange("email")}
               required
-              className="block w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-base text-zinc-900 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+              className="block w-full rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/50"
             />
           </div>
 
           <div className="space-y-2">
             <label
               htmlFor="password"
-              className="text-sm font-medium text-zinc-700"
+              className="text-sm font-medium text-slate-300"
             >
               Password
             </label>
@@ -171,7 +171,7 @@ export default function Home() {
               value={form.password}
               onChange={handleChange("password")}
               required
-              className="block w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-base text-zinc-900 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+              className="block w-full rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-base text-white placeholder-slate-500 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/50"
             />
           </div>
 
@@ -183,17 +183,17 @@ export default function Home() {
           </button>
 
           {error ? (
-            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            <p className="rounded-xl border border-red-800 bg-red-950/30 px-4 py-3 text-sm text-red-400">
               {error}
             </p>
           ) : null}
         </form>
 
         <footer className="mt-12 space-y-2">
-          <p className="text-xs text-zinc-500">
+          <p className="text-xs text-slate-400">
             Need an account? Ask the admin team to invite you.
           </p>
-          <p className="text-xs text-zinc-500">
+          <p className="text-xs text-slate-400">
             By signing in you agree to the community privacy policy and
             acknowledge all call notes remain confidential.
           </p>
