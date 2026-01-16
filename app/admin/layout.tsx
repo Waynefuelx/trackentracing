@@ -11,6 +11,7 @@ const adminNav = [
     label: "Review successful submissions",
   },
   { href: "/admin/successful-cases", label: "Successful cases" },
+  { href: "/admin/payslips", label: "Payslips" },
   { href: "/admin/reports", label: "Reports" },
 ];
 
